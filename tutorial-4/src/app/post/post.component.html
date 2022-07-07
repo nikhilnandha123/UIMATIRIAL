@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+
+        <th (click)="sort('id')">userid</th>
+        <th (click)="sort('title')">title</th>
+        <th (click)="sort('body')">body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts| paginate: { itemsPerPage: 5, currentPage: p } | orderBy:key:reverse">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<pagination-controls (pageChange)="p = $event" class="text-center"></pagination-controls>

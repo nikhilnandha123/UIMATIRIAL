@@ -1,0 +1,17 @@
+<!-- <p>card works!</p> -->
+<div class="row">
+    <!-- //pela index levani -->
+<div class="col" *ngFor="let i of card">
+    <!-- routat link aapvani card in andar -->
+<!-- <div class="card" [routerLink]="['/studentdetail',{id:i}]" style="width: 18rem;"> -->
+<img [src]="i.thumbnailUrl" class="card-img-top" alt="...">
+
+<div class="card-body">
+<h5 class="card-title">{{i.id}}</h5>
+<hr>
+<p class="card-text">{{i.title}}</p>
+<!-- <p class="card-text">Enrollment_no: {{sd.Enrollment_no}}</p> -->
+</div>
+</div>
+</div>
+<!-- </div> -->

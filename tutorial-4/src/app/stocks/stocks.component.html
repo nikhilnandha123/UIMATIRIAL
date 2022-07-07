@@ -1,0 +1,23 @@
+<div class="container col-md-12">
+    <h1 class="text-center mt-2">Company Detail</h1>
+    <table class="table {{theme}} table-striped table-hover">
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stock of stocks">
+            
+                <!-- <ng-template [ngIf]="stock.price > 100000"> -->
+                    <td>{{stock.name}}</td>
+                    <td>{{stock.price}}</td>
+                    <td>{{stock.qty}}</td>
+                <!-- </ng-template> -->
+            </tr>
+        </tbody>
+    </table>
+    <div class="col-md-12 text-center ">
+        <button class="btn btn-dark md-2" (mouseover)="submit()" (mouseout)="mousein()">submit</button>
+    </div> 
+</div>
